@@ -1,0 +1,19 @@
+.motionContainer {
+  width: 100%;
+  overflow: auto;
+}
+.head {
+  height: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 35px;
+  font-weight: 900;
+  text-transform: uppercase;
+  text-align: center;
+}
+.container {
+  margin-top: 25px;
+  width: 95%;
+  padding: 10px;
+}

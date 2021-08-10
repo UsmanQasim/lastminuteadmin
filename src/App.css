@@ -1,0 +1,14 @@
+.megaContainer {
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  color: white;
+}
+
+@media (max-width: 480px) {
+  .megaContainer {
+    flex-direction: column-reverse;
+  }
+}

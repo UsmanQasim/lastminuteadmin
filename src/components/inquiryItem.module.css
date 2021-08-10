@@ -1,0 +1,32 @@
+.container {
+  border: none;
+  border-bottom: 1px solid lightgreen;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 8px;
+  border-radius: 15px;
+  padding: 15px;
+  font-size: 18px;
+  font-weight: 800;
+  transition: 0.3s ease-in-out;
+}
+.container p {
+  max-width: 200px;
+  min-width: 150px;
+}
+
+.container:hover {
+  background-color: black;
+  transform: scale(1.02);
+  color: white;
+}
+.btnTrash {
+  padding: 3px;
+  font-size: 35px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+.btnTrash:hover {
+  color: red;
+}

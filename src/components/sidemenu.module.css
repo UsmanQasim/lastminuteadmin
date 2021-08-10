@@ -1,0 +1,40 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
+.container {
+  border-right: 2px solid lightgreen;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%; /* Full-height: remove this if you want "auto" height */
+  width: 300px; /* Set the width of the sidebar */
+  z-index: 9; /* Stay on top */
+  overflow-x: hidden; /* Disable horizontal scroll */
+}
+
+/* .btn_container {
+  /* width: 100%; */
+/* background-color: black; */
+/* display: flex;
+  justify-content: center;
+  align-items: center; 
+} */
+
+.btn {
+  width: 230px;
+  height: 60px;
+  font-family: "Roboto", sans-serif;
+  cursor: pointer;
+  background: transparent;
+  color: white;
+  margin: 10px;
+  border: none;
+  border-bottom: 1px solid lightgreen;
+  font-size: 22px;
+  text-transform: uppercase;
+  font-weight: 800;
+  border-radius: 15px;
+  transition: 0.3s ease-in-out;
+}
+.btn:hover {
+  transform: scale(1.0175);
+}
