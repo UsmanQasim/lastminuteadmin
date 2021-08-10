@@ -16,12 +16,12 @@ import { fetchInquiries } from "./redux/inquiries/inquryActions";
 import { connect } from "react-redux";
 //redux - end
 
+import {CgLogOut} from 'react-icons/cg';
 //import custom stuff
 import "./App.css";
 //importing Pages;
 import ContactInquiries from "./components/ContactInquiries";
 import Inquiries from "./components/Inquiries";
-// import Contact from "./Pages/Contact/Contact";
 
 const NotFound = () => {
   return <div>NotFound</div>;
@@ -104,12 +104,23 @@ const App = () => {
     }
   };
 
+  const logout = () => {
+     //log out methods
+      localStorage.removeItem('user_key');
+      window.location.reload();
+  }
+
   return (
     <>
       <div className="megaContainer">
         <Sidemenu selected={selected} setSelected={setSelected} />
+        <div className="logout-btn">
+          <button onClick={logout}>Logout &nbsp;<CgLogOut/></button>
+          
+        </div>
         {selected ? showComponent() : ""}
       </div>
+      
     </>
   );
 };

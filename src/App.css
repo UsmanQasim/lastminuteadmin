@@ -7,6 +7,31 @@
   color: white;
 }
 
+.logout-btn {
+  position: absolute;
+  top: 3%;
+  right: 3%;
+}
+
+.logout-btn button {
+  color: white;
+  background-color: transparent;
+  cursor: pointer;
+  font-size: 18px;
+  display: flex;
+  width: 100px;
+  border-radius: 5px;
+  align-items: center;
+  justify-content: space-evenly;
+  padding-bottom: 5px;
+  border: 1px solid white;
+  padding: 10px 5px;
+}
+.logout-btn button:hover{
+  background: red;
+  color: white;
+}
+
 @media (max-width: 480px) {
   .megaContainer {
     flex-direction: column-reverse;

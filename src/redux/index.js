@@ -1,1 +1,2 @@
-export * from "./inquiries/inquiryActions";
+export * from './inquiries/inquryActions';
+export * from "./user/userActions";
