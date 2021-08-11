@@ -2,20 +2,26 @@ import React from "react";
 import style from "./inquiryItem.module.css";
 import { FaTrash } from "react-icons/fa";
 
-const InquiryItem = ({ Inquiry, deleteItem }) => {
+import { motion } from 'framer-motion';
+
+const InquiryItem = ({ Inquiry, showInquiryDetail }) => {
   return (
-    <div
+    <motion.div
+      initial={{ y: 10, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.5, type: "spring", stiffness: 200 }}
       className={style.container}
-      onClick={() => console.log("here's Johney")}
+      onClick={() => showInquiryDetail(Inquiry)}
     >
       <p> From : {Inquiry.fname}</p>
       <br />
       <p>{Inquiry.date}</p>
       <FaTrash
         className={style.btnTrash}
-        onClick={() => deleteItem(Inquiry.id)}
+        onClick={() => console.log("Deleting: ", Inquiry.id)}
       />
-    </div>
+    </motion.div>
   );
 };
 

@@ -1,16 +1,10 @@
 import React from "react";
 import { motion } from "framer-motion";
 import style from "./inquiries.module.css";
-import InquiryItem from "./InquiryItem";
+
+import ShowInquiries from "./ShowInquiries";
 
 const Inquiries = ({ Inquiries }) => {
-  const deleteItem = (id) => {
-    const filtered = Inquiries.filter((Inquiry) =>
-      Inquiry.id === id ? true : false
-    );
-    console.log(filtered);
-  };
-  console.log(Inquiries);
   return (
     <>
       <motion.div
@@ -22,17 +16,7 @@ const Inquiries = ({ Inquiries }) => {
       >
         <p className={style.head}>Inquiries</p>
         <div className={style.container}>
-          {Inquiries ? (
-            Inquiries.map((Inquiry, key) => (
-              <InquiryItem
-                Inquiry={Inquiry}
-                key={key}
-                deleteItem={deleteItem}
-              />
-            ))
-          ) : (
-            <p>No Inquiries</p>
-          )}
+          <ShowInquiries Inquiries={Inquiries} />
         </div>
       </motion.div>
     </>
