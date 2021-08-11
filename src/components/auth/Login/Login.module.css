@@ -6,9 +6,9 @@
   height: 100vh;
   width: 100%;
 }
-.header{
-    margin-bottom: 25px;
-    text-transform: uppercase;
+.header {
+  margin-bottom: 25px;
+  text-transform: uppercase;
 }
 input {
   width: 200px;
@@ -20,6 +20,22 @@ input {
   display: flex;
   justify-content: center;
   flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (max-width: 480px) {
+  .formContainer {
+    width: 100%;
+    overflow: hidden;
+    max-width: 300px;
+  }
+}
+@media (max-width: 320px) {
+  .formContainer {
+    width: 100%;
+    overflow: hidden;
+    max-width: 250px;
+  }
 }
 .btn {
   padding: 12px;
@@ -31,15 +47,15 @@ input {
   background-color: transparent;
   border: 1px solid lightgreen;
   transition: 0.3s ease-in-out;
-    cursor: pointer;
-    font-size: 18px;
+  cursor: pointer;
+  font-size: 18px;
 }
 
 .btn:hover {
-    color: white;
-    
-    border-left-color: green;
-    border-right-color: green;
+  color: white;
+
+  border-left-color: green;
+  border-right-color: green;
   background-color: lightgreen;
 }
 
@@ -71,10 +87,10 @@ input {
   color: black;
 }
 
-.error{
-    text-align: center;
-    margin: 10px 5px;
-    color: red;
-    font-weight: 800;
-    letter-spacing: 1px;
+.error {
+  text-align: center;
+  margin: 10px 5px;
+  color: red;
+  font-weight: 800;
+  letter-spacing: 1px;
 }

@@ -27,13 +27,15 @@
   border: 1px solid white;
   padding: 10px 5px;
 }
-.logout-btn button:hover{
+.logout-btn button:hover {
   background: red;
   color: white;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 680px) {
   .megaContainer {
     flex-direction: column-reverse;
+    justify-content: space-between;
+    padding-top: 90px;
   }
 }

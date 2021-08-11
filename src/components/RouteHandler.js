@@ -19,7 +19,7 @@ const RouteHandler = () => {
       if (st_user_val.includes(SECRET_KEY)) {
         setLogged(true);
       }
-    }
+    } else setLogged(false);
   }, []);
 
   return (
