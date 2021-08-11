@@ -9,13 +9,10 @@ export const fetchUsers = () => {
   return (dispatch) => {
     dispatch(fetchUsersRequest());
 
-    const reqURL = "http://backend.lastminuteweddings.uk/users/getUsers.php";
+    const reqURL = "http://backend.lastminuteweddings.uk/?users";
 
     Axios.get(reqURL)
-      .then((response) => {
-        const users = response.data;
-        dispatch(fetchUsersSuccess(users));
-      })
+      .then((response) => dispatch(fetchUsersSuccess(response.data)))
       .catch((error) => dispatch(fetchUsersFailure(error.message)));
   };
 };

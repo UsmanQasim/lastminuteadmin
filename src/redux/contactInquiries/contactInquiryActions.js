@@ -9,8 +9,7 @@ export const fetchContactInquiries = () => {
   return (dispatch) => {
     dispatch(fetchContactInquiriesRequest());
 
-    const reqURL =
-      "http://backend.lastminuteweddings.uk/contactInquiries/getContactInquiries.php";
+    const reqURL = "http://backend.lastminuteweddings.uk/?contact_inquiries";
 
     Axios.get(reqURL)
       .then((response) => dispatch(fetchContactInquiriesSuccess(response.data)))
