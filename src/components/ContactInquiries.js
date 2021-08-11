@@ -21,9 +21,17 @@ const ContactInquiries = ({ Inquiries }) => {
       >
         <p className={style.head}>Contact Inquiries</p>
         <div className={style.container}>
-          {Inquiries.map((Inquiry, key) => (
-            <InquiryItem Inquiry={Inquiry} key={key} deleteItem={deletedItem} />
-          ))}
+          {Inquiries ? (
+            Inquiries.map((Inquiry, key) => (
+              <InquiryItem
+                Inquiry={Inquiry}
+                key={key}
+                deleteItem={deletedItem}
+              />
+            ))
+          ) : (
+            <p>No Inquiries</p>
+          )}
         </div>
       </motion.div>
     </>

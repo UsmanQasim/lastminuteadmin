@@ -10,7 +10,7 @@ import { Switch, Route, useLocation, Redirect } from "react-router-dom";
 import { authRoutes, appRoutes } from "./utils/routes";
 
 const RouteHandler = () => {
-  const [logged, setLogged] = useState(false);
+  const [logged, setLogged] = useState(null);
   const location = useLocation();
 
   useEffect(() => {
@@ -28,13 +28,19 @@ const RouteHandler = () => {
         <Route exact path="/notfound" component={NotFound} />
         <Route>
           <Switch>
-            {!logged
-              ? authRoutes.map(({ destination, comp }, key) => (
-                  <Route key={key} path={destination} component={comp} exact />
-                ))
-              : appRoutes.map(({ destination, comp }, key) => (
-                  <Route key={key} path={destination} component={comp} exact />
-                ))}
+            {logged === null ? (
+              <>
+                <h1>Loading...</h1>
+              </>
+            ) : !logged ? (
+              authRoutes.map(({ destination, comp }, key) => (
+                <Route key={key} path={destination} component={comp} exact />
+              ))
+            ) : (
+              appRoutes.map(({ destination, comp }, key) => (
+                <Route key={key} path={destination} component={comp} exact />
+              ))
+            )}
             <Redirect to="/notfound" />
           </Switch>
         </Route>

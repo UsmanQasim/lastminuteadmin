@@ -10,6 +10,7 @@ const Inquiries = ({ Inquiries }) => {
     );
     console.log(filtered);
   };
+  console.log(Inquiries);
   return (
     <>
       <motion.div
@@ -21,9 +22,17 @@ const Inquiries = ({ Inquiries }) => {
       >
         <p className={style.head}>Inquiries</p>
         <div className={style.container}>
-          {Inquiries.map((Inquiry, key) => (
-            <InquiryItem Inquiry={Inquiry} key={key} deleteItem={deleteItem} />
-          ))}
+          {Inquiries ? (
+            Inquiries.map((Inquiry, key) => (
+              <InquiryItem
+                Inquiry={Inquiry}
+                key={key}
+                deleteItem={deleteItem}
+              />
+            ))
+          ) : (
+            <p>No Inquiries</p>
+          )}
         </div>
       </motion.div>
     </>
