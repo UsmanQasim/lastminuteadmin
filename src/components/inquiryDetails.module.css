@@ -1,0 +1,146 @@
+.container {
+  width: 100%;
+  height: 100%;
+  overflow-x: auto;
+}
+
+.parent {
+  width: 900px;
+}
+.tableContainer {
+  width: 100%;
+}
+
+.tableContainer tr th {
+  background-color: rgb(49, 48, 48);
+  height: 50px;
+}
+tr {
+  background-color: royalblue;
+}
+
+.tableContainer .innerTable {
+  display: flex;
+  padding: 10px;
+}
+
+.tableContainer .innerTable .tag {
+  color: black;
+  font-size: 16px;
+  font-weight: 800;
+}
+.th_heading {
+  display: flex;
+  padding: 5px 10px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.th_heading button {
+  border: none;
+  padding: 10px;
+}
+.th_heading button:hover {
+  background-color: black;
+  color: white;
+}
+
+.btn_back {
+  border: none;
+  background-color: rgb(155, 153, 150);
+  padding: 10px;
+  font-weight: 800;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  text-transform: uppercase;
+  transition: 0.3s ease-in-out;
+}
+.btn_back:hover {
+  background-color: purple;
+  color: white;
+}
+
+label {
+  font-size: 18px;
+}
+
+.noteArea {
+  margin-top: 2px;
+  height: 300px;
+  display: flex;
+  width: 900px;
+  overflow-x: auto;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.noteHeader {
+  background-color: grey;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.btnNotes {
+  margin-right: 3px;
+  padding: 5px;
+}
+
+.noteArea textarea {
+  width: auto;
+  background: none;
+  border: none;
+  font-size: 22px;
+  padding: 5px 10px;
+  min-width: 900px;
+  height: 220px;
+  font-weight: 800;
+  background-color: white;
+  resize: none;
+}
+.active {
+  background: white;
+}
+
+/* 
+.innerContainer {
+  display: flex;
+}
+.innerContainer label {
+  color: red;
+}
+.column {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(49, 48, 48);
+  height: 35px;
+}
+.column_header {
+  background-color: rgb(121, 117, 117);
+  display: flex;
+  justify-content: space-around;
+}
+.content {
+  display: flex;
+  justify-content: space-around;
+  height: 80px;
+}
+.customer_detail {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 100%;
+  background-color: brown;
+}
+.event_detail {
+  width: 100%;
+  background-color: purple;
+}
+.date_detail {
+  width: 100%;
+  background-color: rosybrown;
+} */

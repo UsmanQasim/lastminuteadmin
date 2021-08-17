@@ -5,10 +5,10 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100%; /* Full-height: remove this if you want "auto" height */
-  width: 300px; /* Set the width of the sidebar */
-  z-index: 9; /* Stay on top */
-  overflow-x: hidden; /* Disable horizontal scroll */
+  height: 100%;
+  width: 300px;
+  z-index: 9;
+  overflow-x: hidden;
 }
 
 /* .btn_container {
@@ -50,7 +50,13 @@
 }
 @media (max-width: 460px) {
   .btn {
-    width: 200px;
+    width: 180px;
     font-size: 18px;
+  }
+}
+@media (max-width: 380px) {
+  .btn {
+    width: 160px;
+    font-size: 16px;
   }
 }

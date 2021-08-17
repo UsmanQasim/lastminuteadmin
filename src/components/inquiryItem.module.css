@@ -30,3 +30,18 @@
 .btnTrash:hover {
   color: red;
 }
+.rightIcons {
+  display: flex;
+  width: 20%;
+  justify-content: space-evenly;
+}
+
+.btnNotes {
+  padding: 3px;
+  font-size: 35px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+.btnNotes:hover {
+  color: royalblue;
+}

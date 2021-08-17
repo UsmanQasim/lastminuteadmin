@@ -15,7 +15,7 @@ const ContactInquiries = ({ Inquiries }) => {
       >
         <p className={style.head}>Contact Inquiries</p>
         <div className={style.container}>
-          <ShowInquiries Inquiries={Inquiries} />
+          <ShowInquiries Inquiries={Inquiries} query="CI" />
         </div>
       </motion.div>
     </>

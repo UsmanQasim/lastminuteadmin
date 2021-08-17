@@ -5,7 +5,7 @@ import InquiryItem from "./InquiryItem";
 import InquiryDetail from "./InquiryDetail";
 import { AnimatePresence } from "framer-motion";
 
-const ShowInquiries = ({ Inquiries }) => {
+const ShowInquiries = ({ Inquiries, query }) => {
   const [detailShown, showDetail] = useState(false);
   const [selectedItem, setSelectedItem] = useState(Inquiries[0]);
 
@@ -18,26 +18,28 @@ const ShowInquiries = ({ Inquiries }) => {
   };
 
   return (
-      <AnimatePresence exitBeforeEnter>
-          {
-              Inquiries ? (
-                !detailShown ? (
-                  Inquiries.map((Inquiry, key) => (
-                    <InquiryItem
-                      Inquiry={Inquiry}
-                      key={key}
-                      showInquiryDetail={showInquiryDetail}
-                    />
-                  ))
-                ) : (
-                  <InquiryDetail Inquiry={selectedItem} hideInquiryDetail={hideInquiryDetail} />
-                )
-              ) : (
-                <p>No Inquiries</p>
-              )
-          }
-      </AnimatePresence>
-  )
+    <AnimatePresence exitBeforeEnter>
+      {Inquiries ? (
+        !detailShown ? (
+          Inquiries.map((Inquiry, key) => (
+            <InquiryItem
+              Inquiry={Inquiry}
+              key={key}
+              showInquiryDetail={showInquiryDetail}
+            />
+          ))
+        ) : (
+          <InquiryDetail
+            Inquiry={selectedItem}
+            type={query}
+            hideInquiryDetail={hideInquiryDetail}
+          />
+        )
+      ) : (
+        <p>No Inquiries</p>
+      )}
+    </AnimatePresence>
+  );
 };
 
 export default ShowInquiries;

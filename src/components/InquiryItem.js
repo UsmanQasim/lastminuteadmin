@@ -1,8 +1,8 @@
 import React from "react";
 import style from "./inquiryItem.module.css";
 import { FaTrash } from "react-icons/fa";
-
-import { motion } from 'framer-motion';
+import { CgNotes } from "react-icons/cg";
+import { motion } from "framer-motion";
 
 const InquiryItem = ({ Inquiry, showInquiryDetail }) => {
   return (
@@ -14,13 +14,15 @@ const InquiryItem = ({ Inquiry, showInquiryDetail }) => {
       className={style.container}
       onClick={() => showInquiryDetail(Inquiry)}
     >
-      <p> From : {Inquiry.fname}</p>
-      <br />
+      <p> From : {Inquiry.firstName}</p>
       <p>{Inquiry.date}</p>
-      <FaTrash
-        className={style.btnTrash}
-        onClick={() => console.log("Deleting: ", Inquiry.id)}
-      />
+      <div className={style.rightIcons}>
+        <CgNotes className={style.btnNotes} />
+        <FaTrash
+          className={style.btnTrash}
+          onClick={() => console.log("Deleting: ", Inquiry.id)}
+        />
+      </div>
     </motion.div>
   );
 };
